@@ -7,6 +7,7 @@
     <script src="js/lib/vue.js"></script>
     <!-- App components -->
     <script src="js/component/data-reader.js"></script>
+    <script src="js/component/cube-summation.js"></script>
   </head>
   <body>
     <div id="app">
@@ -14,6 +15,9 @@
       <br/><br/>
       <label>Input: </label>
       <data-reader v-bind:debug='debug' v-on:data-ready="onDataReady"></data-reader>
+      <br/>
+      <label>Output: </label>
+      <cube-summation v-bind:data='dataTestCases' v-bind:debug='debug'></cube-summation>
     </div>
     <!-- Main -->
     <script src="js/component/main.js"></script>
