@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <!-- External libs -->
     <script src="js/lib/vue.js"></script>
+    <!-- App components -->
+    <script src="js/component/data-reader.js"></script>
   </head>
   <body>
     <div id="app">
-     
+      Active debug: <input type="checkbox" v-model="debug" />
+      <br/><br/>
       <label>Input: </label>
-      <br/>
-      <label>Output: </label>
+      <data-reader v-bind:debug='debug' v-on:data-ready="onDataReady"></data-reader>
     </div>
     <!-- Main -->
     <script src="js/component/main.js"></script>
